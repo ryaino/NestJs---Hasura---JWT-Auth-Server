@@ -1,0 +1,15 @@
+table:
+  name: authorized
+  schema: public
+insert_permissions:
+  - role: editor
+    permission:
+      check: {}
+      columns:
+        - name
+        - id
+select_permissions:
+  - role: editor
+    permission:
+      columns: []
+      filter: {}

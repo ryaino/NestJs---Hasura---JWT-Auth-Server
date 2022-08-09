@@ -1,0 +1,14 @@
+- name: auth-db
+  kind: postgres
+  configuration:
+    connection_info:
+      database_url:
+        connection_parameters:
+          database: auth-db
+          host: host.docker.internal
+          password: password
+          port: 5432
+          username: postgres
+      isolation_level: read-committed
+      use_prepared_statements: false
+  tables: "!include auth-db/tables/tables.yaml"
